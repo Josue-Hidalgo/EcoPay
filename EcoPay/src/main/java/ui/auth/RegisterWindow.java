@@ -39,9 +39,9 @@ public class RegisterWindow extends javax.swing.JFrame {
         CantonCB = new javax.swing.JComboBox<>();
         DistrictCB = new javax.swing.JComboBox<>();
         UserTF = new javax.swing.JTextField();
-        PasswordTF = new javax.swing.JTextField();
-        ConfirmationTF = new javax.swing.JTextField();
         ShowPWCkB = new javax.swing.JCheckBox();
+        PasswordPF = new javax.swing.JPasswordField();
+        ConfirmationPF = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -171,31 +171,21 @@ public class RegisterWindow extends javax.swing.JFrame {
             }
         });
 
-        PasswordTF.setText("Contraseña");
-        PasswordTF.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                PasswordTFMouseClicked(evt);
-            }
-        });
-
-        ConfirmationTF.setText("Confirmación (PW)");
-        ConfirmationTF.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ConfirmationTFMouseClicked(evt);
-            }
-        });
-        ConfirmationTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfirmationTFActionPerformed(evt);
-            }
-        });
-
         ShowPWCkB.setText("Mostrar Contraseña");
         ShowPWCkB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ShowPWCkBActionPerformed(evt);
             }
         });
+
+        PasswordPF.setText("Password");
+        PasswordPF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordPFActionPerformed(evt);
+            }
+        });
+
+        ConfirmationPF.setText("Password");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -244,16 +234,16 @@ public class RegisterWindow extends javax.swing.JFrame {
                         .addGap(130, 130, 130)
                         .addComponent(UserTF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
-                        .addComponent(PasswordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(PasswordPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(130, 130, 130)
                         .addComponent(ShowPWCkB, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
-                        .addComponent(ConfirmationTF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ConfirmationPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(130, 130, 130)
                         .addComponent(RegisterBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,14 +294,14 @@ public class RegisterWindow extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UserTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PasswordTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PasswordPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ShowPWCkB)
-                    .addComponent(ConfirmationTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ConfirmationPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addComponent(RegisterBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -328,7 +318,7 @@ public class RegisterWindow extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -375,16 +365,16 @@ public class RegisterWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CountryCBActionPerformed
 
-    private void ConfirmationTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmationTFActionPerformed
-        
-    }//GEN-LAST:event_ConfirmationTFActionPerformed
-
-    private void ConfirmationTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmationTFMouseClicked
-        ConfirmationTF.setText("");
-    }//GEN-LAST:event_ConfirmationTFMouseClicked
-
     private void ShowPWCkBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowPWCkBActionPerformed
-        // TODO add your handling code here:
+        if (ShowPWCkB.isSelected()) {
+            // Mostrar texto plano
+            PasswordPF.setEchoChar((char) 0);
+            ConfirmationPF.setEchoChar((char) 0);
+        } else {
+            // Ocultar texto (volver a usar el carácter de ocultamiento por defecto)
+            PasswordPF.setEchoChar('•'); // Puedes usar '*' también
+            ConfirmationPF.setEchoChar('•');
+        }
     }//GEN-LAST:event_ShowPWCkBActionPerformed
 
     private void IdentificationTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IdentificationTFMouseClicked
@@ -423,13 +413,13 @@ public class RegisterWindow extends javax.swing.JFrame {
         UserTF.setText("");
     }//GEN-LAST:event_UserTFMouseClicked
 
-    private void PasswordTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PasswordTFMouseClicked
-        PasswordTF.setText("");
-    }//GEN-LAST:event_PasswordTFMouseClicked
+    private void PasswordPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordPFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordPFActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CantonCB;
-    private javax.swing.JTextField ConfirmationTF;
+    private javax.swing.JPasswordField ConfirmationPF;
     private javax.swing.JComboBox<String> CountryCB;
     private javax.swing.JComboBox<String> DistrictCB;
     private javax.swing.JTextField EmailTF;
@@ -439,7 +429,7 @@ public class RegisterWindow extends javax.swing.JFrame {
     private javax.swing.JTextField IdentificationTF;
     private javax.swing.JComboBox<String> IdentificationTypeComboBox;
     private javax.swing.JCheckBox MaleCkB;
-    private javax.swing.JTextField PasswordTF;
+    private javax.swing.JPasswordField PasswordPF;
     private javax.swing.JTextField PhoneTF;
     private javax.swing.JButton ProfileBtn;
     private javax.swing.JComboBox<String> ProvinceCB;

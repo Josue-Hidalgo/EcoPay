@@ -69,7 +69,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <EmptySpace pref="26" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -138,20 +138,20 @@
                               <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
                               <Component id="UserTF" min="-2" pref="150" max="-2" attributes="0"/>
                               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                              <Component id="PasswordTF" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="PasswordPF" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
                               <Component id="ShowPWCkB" min="-2" pref="150" max="-2" attributes="0"/>
                               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                              <Component id="ConfirmationTF" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="ConfirmationPF" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
                               <Component id="RegisterBtn" min="-2" pref="220" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -219,16 +219,16 @@
                       <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="UserTF" min="-2" max="-2" attributes="0"/>
-                          <Component id="PasswordTF" min="-2" max="-2" attributes="0"/>
+                          <Component id="PasswordPF" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="ShowPWCkB" min="-2" max="-2" attributes="0"/>
-                          <Component id="ConfirmationTF" min="-2" max="-2" attributes="0"/>
+                          <Component id="ConfirmationPF" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
                       <Component id="RegisterBtn" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -431,23 +431,6 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="UserTFMouseClicked"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="PasswordTF">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PasswordTFMouseClicked"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="ConfirmationTF">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Confirmaci&#xf3;n (PW)"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ConfirmationTFMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ConfirmationTFActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JCheckBox" name="ShowPWCkB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Mostrar Contrase&#xf1;a"/>
@@ -455,6 +438,19 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ShowPWCkBActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="PasswordPF">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PasswordPFActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="ConfirmationPF">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
