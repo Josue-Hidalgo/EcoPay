@@ -1,5 +1,6 @@
 package ui.auth;
 
+import ui.administrator.AdminMainWindow;
 import ui.user.UserMainWindow;
 import ui.utils.Utils;
 
@@ -94,9 +95,17 @@ public class LoginWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
+        AdminMainWindow adminW = new AdminMainWindow();
+        adminW.setVisible(true);
+        this.setVisible(false);
+        
+        /*
+        
         UserMainWindow userW = new UserMainWindow();
         userW.setVisible(true);
         this.setVisible(false);
+        
+        */
     }//GEN-LAST:event_LoginBtnActionPerformed
 
     private void UserNameTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserNameTFMouseClicked

@@ -1,5 +1,6 @@
 package ui.user;
 
+import ui.mainpkg.MainWindow;
 import ui.utils.Utils;
 
 public class UserMainWindow extends javax.swing.JFrame {
@@ -7,6 +8,8 @@ public class UserMainWindow extends javax.swing.JFrame {
         initComponents();
         Utils.adjustImageToButton(LogoBtn, "/img/mainlogo.png");
         Utils.adjustImageToButton(ProfileBtn, "/img/perfil.png");
+        PopUpPanel.setVisible(false);
+        ProfileBtn.setVisible(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -14,7 +17,6 @@ public class UserMainWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        ProfileBtn = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         LogoBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -26,29 +28,23 @@ public class UserMainWindow extends javax.swing.JFrame {
         CoinsTF = new javax.swing.JTextField();
         CoinsTradedTF = new javax.swing.JTextField();
         CoinsObtainedTF = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        LoginBtn = new javax.swing.JButton();
-        LoginBtn1 = new javax.swing.JButton();
-        LoginBtn2 = new javax.swing.JButton();
-        Title1 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        TransactionsBtn = new javax.swing.JButton();
+        TradeBtn = new javax.swing.JButton();
+        Title5 = new javax.swing.JLabel();
+        RecicleBtn = new javax.swing.JButton();
+        MapBtn = new javax.swing.JButton();
+        ProfileBtn = new javax.swing.JButton();
+        PopUpPanel = new javax.swing.JPanel();
+        ProfileChild1Btn = new javax.swing.JButton();
+        ProfileChild2Btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(15, 71, 34));
         jPanel1.setMinimumSize(new java.awt.Dimension(960, 80));
         jPanel1.setPreferredSize(new java.awt.Dimension(960, 100));
-
-        ProfileBtn.setBorder(null);
-        ProfileBtn.setIconTextGap(0);
-        ProfileBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        ProfileBtn.setMaximumSize(new java.awt.Dimension(40, 40));
-        ProfileBtn.setMinimumSize(new java.awt.Dimension(40, 40));
-        ProfileBtn.setPreferredSize(new java.awt.Dimension(40, 40));
-        ProfileBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProfileBtnActionPerformed(evt);
-            }
-        });
 
         jSeparator1.setForeground(new java.awt.Color(77, 175, 124));
 
@@ -65,38 +61,34 @@ public class UserMainWindow extends javax.swing.JFrame {
         });
 
         jPanel2.setBackground(new java.awt.Color(28, 107, 74));
-        jPanel2.setLayout(null);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Title2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         Title2.setForeground(new java.awt.Color(255, 255, 255));
         Title2.setText("NOMBRE USUARIO");
-        jPanel2.add(Title2);
-        Title2.setBounds(70, 30, 170, 31);
+        jPanel2.add(Title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 170, -1));
 
         Title3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         Title3.setForeground(new java.awt.Color(255, 255, 255));
         Title3.setText("NOMBRE USUARIO");
-        jPanel2.add(Title3);
-        Title3.setBounds(70, 30, 170, 31);
+        jPanel2.add(Title3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 170, -1));
 
         Title6.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         Title6.setForeground(new java.awt.Color(255, 255, 255));
         Title6.setText("GANADOS:");
-        jPanel2.add(Title6);
-        Title6.setBounds(90, 190, 130, 31);
+        jPanel2.add(Title6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 130, 31));
 
         Title7.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         Title7.setForeground(new java.awt.Color(255, 255, 255));
         Title7.setText("CANJEADOS:");
-        jPanel2.add(Title7);
-        Title7.setBounds(90, 280, 130, 31);
+        jPanel2.add(Title7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 130, 31));
 
         Title4.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         Title4.setForeground(new java.awt.Color(204, 153, 0));
         Title4.setText("MIS COINS:");
-        jPanel2.add(Title4);
-        Title4.setBounds(90, 90, 130, 31);
+        jPanel2.add(Title4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 130, 31));
 
+        CoinsTF.setEditable(false);
         CoinsTF.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         CoinsTF.setText("0");
         CoinsTF.addActionListener(new java.awt.event.ActionListener() {
@@ -104,9 +96,9 @@ public class UserMainWindow extends javax.swing.JFrame {
                 CoinsTFActionPerformed(evt);
             }
         });
-        jPanel2.add(CoinsTF);
-        CoinsTF.setBounds(90, 120, 130, 50);
+        jPanel2.add(CoinsTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 130, 50));
 
+        CoinsTradedTF.setEditable(false);
         CoinsTradedTF.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         CoinsTradedTF.setText("0");
         CoinsTradedTF.addActionListener(new java.awt.event.ActionListener() {
@@ -114,9 +106,9 @@ public class UserMainWindow extends javax.swing.JFrame {
                 CoinsTradedTFActionPerformed(evt);
             }
         });
-        jPanel2.add(CoinsTradedTF);
-        CoinsTradedTF.setBounds(90, 310, 130, 50);
+        jPanel2.add(CoinsTradedTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 130, 50));
 
+        CoinsObtainedTF.setEditable(false);
         CoinsObtainedTF.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         CoinsObtainedTF.setText("0");
         CoinsObtainedTF.addActionListener(new java.awt.event.ActionListener() {
@@ -124,71 +116,142 @@ public class UserMainWindow extends javax.swing.JFrame {
                 CoinsObtainedTFActionPerformed(evt);
             }
         });
-        jPanel2.add(CoinsObtainedTF);
-        CoinsObtainedTF.setBounds(90, 220, 130, 50);
+        jPanel2.add(CoinsObtainedTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 130, 50));
 
-        jPanel3.setBackground(new java.awt.Color(28, 107, 74));
-        jPanel3.setLayout(null);
+        jPanel4.setBackground(new java.awt.Color(28, 107, 74));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LoginBtn.setBackground(new java.awt.Color(15, 71, 34));
-        LoginBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        LoginBtn.setForeground(new java.awt.Color(255, 255, 255));
-        LoginBtn.setText("MAPA");
-        LoginBtn.setBorder(null);
-        LoginBtn.setIconTextGap(0);
-        LoginBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        LoginBtn.setMaximumSize(new java.awt.Dimension(40, 40));
-        LoginBtn.setMinimumSize(new java.awt.Dimension(40, 40));
-        LoginBtn.setPreferredSize(new java.awt.Dimension(40, 40));
-        LoginBtn.addActionListener(new java.awt.event.ActionListener() {
+        TransactionsBtn.setBackground(new java.awt.Color(15, 71, 34));
+        TransactionsBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        TransactionsBtn.setForeground(new java.awt.Color(255, 255, 255));
+        TransactionsBtn.setText("TRANSACCIONES");
+        TransactionsBtn.setBorder(null);
+        TransactionsBtn.setIconTextGap(0);
+        TransactionsBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        TransactionsBtn.setMaximumSize(new java.awt.Dimension(40, 40));
+        TransactionsBtn.setMinimumSize(new java.awt.Dimension(40, 40));
+        TransactionsBtn.setPreferredSize(new java.awt.Dimension(40, 40));
+        TransactionsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginBtnActionPerformed(evt);
+                TransactionsBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(LoginBtn);
-        LoginBtn.setBounds(50, 300, 220, 40);
+        jPanel4.add(TransactionsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 220, -1));
 
-        LoginBtn1.setBackground(new java.awt.Color(15, 71, 34));
-        LoginBtn1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        LoginBtn1.setForeground(new java.awt.Color(255, 255, 255));
-        LoginBtn1.setText("RECICLAR");
-        LoginBtn1.setBorder(null);
-        LoginBtn1.setIconTextGap(0);
-        LoginBtn1.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        LoginBtn1.setMaximumSize(new java.awt.Dimension(40, 40));
-        LoginBtn1.setMinimumSize(new java.awt.Dimension(40, 40));
-        LoginBtn1.setPreferredSize(new java.awt.Dimension(40, 40));
-        LoginBtn1.addActionListener(new java.awt.event.ActionListener() {
+        TradeBtn.setBackground(new java.awt.Color(15, 71, 34));
+        TradeBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        TradeBtn.setForeground(new java.awt.Color(255, 255, 255));
+        TradeBtn.setText("CANJEAR");
+        TradeBtn.setBorder(null);
+        TradeBtn.setIconTextGap(0);
+        TradeBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        TradeBtn.setMaximumSize(new java.awt.Dimension(40, 40));
+        TradeBtn.setMinimumSize(new java.awt.Dimension(40, 40));
+        TradeBtn.setPreferredSize(new java.awt.Dimension(40, 40));
+        TradeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginBtn1ActionPerformed(evt);
+                TradeBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(LoginBtn1);
-        LoginBtn1.setBounds(50, 120, 220, 40);
+        jPanel4.add(TradeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
 
-        LoginBtn2.setBackground(new java.awt.Color(15, 71, 34));
-        LoginBtn2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        LoginBtn2.setForeground(new java.awt.Color(255, 255, 255));
-        LoginBtn2.setText("CANJEAR");
-        LoginBtn2.setBorder(null);
-        LoginBtn2.setIconTextGap(0);
-        LoginBtn2.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        LoginBtn2.setMaximumSize(new java.awt.Dimension(40, 40));
-        LoginBtn2.setMinimumSize(new java.awt.Dimension(40, 40));
-        LoginBtn2.setPreferredSize(new java.awt.Dimension(40, 40));
-        LoginBtn2.addActionListener(new java.awt.event.ActionListener() {
+        Title5.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        Title5.setForeground(new java.awt.Color(255, 255, 255));
+        Title5.setText("OPERACIONES");
+        jPanel4.add(Title5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 130, -1));
+
+        RecicleBtn.setBackground(new java.awt.Color(15, 71, 34));
+        RecicleBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        RecicleBtn.setForeground(new java.awt.Color(255, 255, 255));
+        RecicleBtn.setText("RECICLAR");
+        RecicleBtn.setBorder(null);
+        RecicleBtn.setIconTextGap(0);
+        RecicleBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        RecicleBtn.setMaximumSize(new java.awt.Dimension(40, 40));
+        RecicleBtn.setMinimumSize(new java.awt.Dimension(40, 40));
+        RecicleBtn.setPreferredSize(new java.awt.Dimension(40, 40));
+        RecicleBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginBtn2ActionPerformed(evt);
+                RecicleBtnActionPerformed(evt);
             }
         });
-        jPanel3.add(LoginBtn2);
-        LoginBtn2.setBounds(50, 210, 220, 40);
+        jPanel4.add(RecicleBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 220, -1));
 
-        Title1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        Title1.setForeground(new java.awt.Color(255, 255, 255));
-        Title1.setText("OPERACIONES");
-        jPanel3.add(Title1);
-        Title1.setBounds(100, 30, 130, 31);
+        MapBtn.setBackground(new java.awt.Color(15, 71, 34));
+        MapBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MapBtn.setForeground(new java.awt.Color(255, 255, 255));
+        MapBtn.setText("MAPA");
+        MapBtn.setBorder(null);
+        MapBtn.setIconTextGap(0);
+        MapBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        MapBtn.setMaximumSize(new java.awt.Dimension(40, 40));
+        MapBtn.setMinimumSize(new java.awt.Dimension(40, 40));
+        MapBtn.setPreferredSize(new java.awt.Dimension(40, 40));
+        MapBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MapBtnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(MapBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 220, -1));
+
+        ProfileBtn.setBorder(null);
+        ProfileBtn.setIconTextGap(0);
+        ProfileBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        ProfileBtn.setMaximumSize(new java.awt.Dimension(40, 40));
+        ProfileBtn.setMinimumSize(new java.awt.Dimension(40, 40));
+        ProfileBtn.setPreferredSize(new java.awt.Dimension(40, 40));
+        ProfileBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProfileBtnActionPerformed(evt);
+            }
+        });
+
+        PopUpPanel.setBackground(new java.awt.Color(77, 175, 124));
+        PopUpPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ProfileChild1Btn.setBackground(new java.awt.Color(15, 71, 34));
+        ProfileChild1Btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ProfileChild1Btn.setForeground(new java.awt.Color(255, 255, 255));
+        ProfileChild1Btn.setText("PERFIL");
+        ProfileChild1Btn.setBorder(null);
+        ProfileChild1Btn.setIconTextGap(0);
+        ProfileChild1Btn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        ProfileChild1Btn.setMaximumSize(new java.awt.Dimension(40, 40));
+        ProfileChild1Btn.setMinimumSize(new java.awt.Dimension(40, 40));
+        ProfileChild1Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        ProfileChild1Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProfileChild1BtnMouseClicked(evt);
+            }
+        });
+        ProfileChild1Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProfileChild1BtnActionPerformed(evt);
+            }
+        });
+        PopUpPanel.add(ProfileChild1Btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 110, 30));
+
+        ProfileChild2Btn.setBackground(new java.awt.Color(15, 71, 34));
+        ProfileChild2Btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ProfileChild2Btn.setForeground(new java.awt.Color(255, 255, 255));
+        ProfileChild2Btn.setText("SALIR");
+        ProfileChild2Btn.setBorder(null);
+        ProfileChild2Btn.setIconTextGap(0);
+        ProfileChild2Btn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        ProfileChild2Btn.setMaximumSize(new java.awt.Dimension(40, 40));
+        ProfileChild2Btn.setMinimumSize(new java.awt.Dimension(40, 40));
+        ProfileChild2Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        ProfileChild2Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProfileChild2BtnMouseClicked(evt);
+            }
+        });
+        ProfileChild2Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProfileChild2BtnActionPerformed(evt);
+            }
+        });
+        PopUpPanel.add(ProfileChild2Btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 110, 30));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -196,15 +259,18 @@ public class UserMainWindow extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(LogoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(800, 800, 800)
-                .addComponent(ProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(770, 770, 770)
+                .addComponent(ProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(500, 500, 500)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(120, 120, 120)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(820, 820, 820)
+                .addComponent(PopUpPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(290, 290, 290)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(490, 490, 490)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,14 +279,15 @@ public class UserMainWindow extends javax.swing.JFrame {
                     .addComponent(LogoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(ProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PopUpPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -237,58 +304,99 @@ public class UserMainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ProfileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfileBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProfileBtnActionPerformed
-
-    private void LogoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LogoBtnActionPerformed
-
-    private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
-        UserMainWindow userW = new UserMainWindow();
-        userW.setVisible(true);
+    private void TradeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TradeBtnActionPerformed
+        UserTrade1Window tradeW = new UserTrade1Window();
+        tradeW.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_LoginBtnActionPerformed
+    }//GEN-LAST:event_TradeBtnActionPerformed
 
-    private void LoginBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoginBtn1ActionPerformed
+    private void ProfileChild1BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfileChild1BtnActionPerformed
+        UserProfileWindow profileW = new UserProfileWindow();
+        profileW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ProfileChild1BtnActionPerformed
 
-    private void LoginBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtn2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoginBtn2ActionPerformed
-
-    private void CoinsTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoinsTFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CoinsTFActionPerformed
-
-    private void CoinsTradedTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoinsTradedTFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CoinsTradedTFActionPerformed
+    private void TransactionsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TransactionsBtnActionPerformed
+        UserTransactionsWindow transactionsW = new UserTransactionsWindow();
+        transactionsW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_TransactionsBtnActionPerformed
 
     private void CoinsObtainedTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoinsObtainedTFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CoinsObtainedTFActionPerformed
 
+    private void CoinsTradedTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoinsTradedTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CoinsTradedTFActionPerformed
+
+    private void CoinsTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoinsTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CoinsTFActionPerformed
+
+    private void LogoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoBtnActionPerformed
+        UserMainWindow mainW = new UserMainWindow();
+        mainW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_LogoBtnActionPerformed
+
+    private void RecicleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecicleBtnActionPerformed
+        UserRecicle1Window recicleW = new UserRecicle1Window();
+        recicleW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_RecicleBtnActionPerformed
+
+    private void ProfileChild2BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfileChild2BtnActionPerformed
+        MainWindow mainW = new MainWindow();
+        mainW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ProfileChild2BtnActionPerformed
+
+    private void ProfileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfileBtnActionPerformed
+        // Set visible or invisible
+        PopUpPanel.setVisible(!PopUpPanel.isVisible());
+    }//GEN-LAST:event_ProfileBtnActionPerformed
+
+    private void MapBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MapBtnActionPerformed
+        UserMapWindow mapW = new UserMapWindow();
+        mapW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_MapBtnActionPerformed
+
+    private void ProfileChild2BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfileChild2BtnMouseClicked
+        UserMainWindow userW = new UserMainWindow();
+        userW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ProfileChild2BtnMouseClicked
+
+    private void ProfileChild1BtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfileChild1BtnMouseClicked
+        UserProfileWindow userW = new UserProfileWindow();
+        userW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ProfileChild1BtnMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CoinsObtainedTF;
     private javax.swing.JTextField CoinsTF;
     private javax.swing.JTextField CoinsTradedTF;
-    private javax.swing.JButton LoginBtn;
-    private javax.swing.JButton LoginBtn1;
-    private javax.swing.JButton LoginBtn2;
     private javax.swing.JButton LogoBtn;
+    private javax.swing.JButton MapBtn;
+    private javax.swing.JPanel PopUpPanel;
     private javax.swing.JButton ProfileBtn;
-    private javax.swing.JLabel Title1;
+    private javax.swing.JButton ProfileChild1Btn;
+    private javax.swing.JButton ProfileChild2Btn;
+    private javax.swing.JButton RecicleBtn;
     private javax.swing.JLabel Title2;
     private javax.swing.JLabel Title3;
     private javax.swing.JLabel Title4;
+    private javax.swing.JLabel Title5;
     private javax.swing.JLabel Title6;
     private javax.swing.JLabel Title7;
+    private javax.swing.JButton TradeBtn;
+    private javax.swing.JButton TransactionsBtn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
