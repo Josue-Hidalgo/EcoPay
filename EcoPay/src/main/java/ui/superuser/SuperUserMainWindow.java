@@ -1,6 +1,6 @@
 package ui.superuser;
 
-import ui.statistics.StatisticsWindow;
+import ui.statistics.StatisticsMainWindow;
 import ui.utils.Utils;
 
 public class SuperUserMainWindow extends javax.swing.JFrame {
@@ -182,7 +182,7 @@ public class SuperUserMainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_ProfileBtnActionPerformed
 
     private void StatisticsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatisticsBtnActionPerformed
-        StatisticsWindow superConsultsW = new StatisticsWindow();
+        StatisticsMainWindow superConsultsW = new StatisticsMainWindow();
         superConsultsW.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_StatisticsBtnActionPerformed
