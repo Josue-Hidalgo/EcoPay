@@ -107,7 +107,7 @@ public class StatisticsMainWindow extends javax.swing.JFrame {
         ProductsBtn.setBounds(100, 300, 220, 40);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(250, 0, 430, 520);
+        jPanel2.setBounds(260, 0, 430, 520);
 
         LogoBtn.setBorder(null);
         LogoBtn.setIconTextGap(0);
@@ -148,13 +148,13 @@ public class StatisticsMainWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void UsersBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsersBtnActionPerformed
-        StatisticsTopUsersWindow statsUsersW = new StatisticsTopUsersWindow();
+        StatisticsUsersTopWindow statsUsersW = new StatisticsUsersTopWindow();
         statsUsersW.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_UsersBtnActionPerformed
 
     private void AffiliatedBusinessBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AffiliatedBusinessBtnActionPerformed
-        StatisticsAffiliatedBusinessWindow statsAffiliatedBW = new StatisticsAffiliatedBusinessWindow();
+        TEST statsAffiliatedBW = new TEST();
         statsAffiliatedBW.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_AffiliatedBusinessBtnActionPerformed

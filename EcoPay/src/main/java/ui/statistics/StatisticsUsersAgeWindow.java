@@ -2,9 +2,9 @@ package ui.statistics;
 
 import ui.utils.Utils;
 
-public class StatisticsProductsWindow extends javax.swing.JFrame {
+public class StatisticsUsersAgeWindow extends javax.swing.JFrame {
 
-    public StatisticsProductsWindow() {
+    public StatisticsUsersAgeWindow() {
         initComponents();
         Utils.adjustImageToButton(LogoBtn, "/img/mainlogo.png");
     }
@@ -84,19 +84,13 @@ public class StatisticsProductsWindow extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Mes", "Año", "Cantidad", "Porcentaje"
+                "Edad", "Cantidad"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

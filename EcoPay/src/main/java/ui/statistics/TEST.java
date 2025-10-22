@@ -1,14 +1,19 @@
 package ui.statistics;
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.general.DefaultPieDataset;
 import ui.utils.Utils;
 
-public class StatisticsProductsWindow extends javax.swing.JFrame {
+public class TEST extends javax.swing.JFrame {
 
-    public StatisticsProductsWindow() {
+    public TEST() {
         initComponents();
+        initPieChart();
         Utils.adjustImageToButton(LogoBtn, "/img/mainlogo.png");
     }
-
+    
     // DO NOT TOUCH
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -84,19 +89,13 @@ public class StatisticsProductsWindow extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Mes", "Año", "Cantidad", "Porcentaje"
+                "Tipo de Comercio", "Cantidad", "Porcentaje"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -127,6 +126,28 @@ public class StatisticsProductsWindow extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void initPieChart() {
+        DefaultPieDataset dataset = new DefaultPieDataset();
+        dataset.setValue("A", 40);
+        dataset.setValue("B", 25);
+        dataset.setValue("C", 20);
+        dataset.setValue("D", 15);
+
+        JFreeChart chart = ChartFactory.createPieChart(
+                "Centros de Acopio",
+                dataset,
+                true,
+                true,
+                false
+        );
+
+        ChartPanel chartPanel = new ChartPanel(chart);
+        chartPanel.setMouseWheelEnabled(true);
+        chartPanel.setPreferredSize(new java.awt.Dimension(480, 430));
+
+        GraphicSP.setViewportView(chartPanel);
+    }
 
     private void LogoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoBtnActionPerformed
         StatisticsMainWindow statsMainW = new StatisticsMainWindow();
