@@ -18,9 +18,10 @@ public class UserTransactionsWindow extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         CollectionCenterPanel = new javax.swing.JPanel();
         Title5 = new javax.swing.JLabel();
-        Confirm2Btn1 = new javax.swing.JButton();
+        LoadBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        BackBtn = new javax.swing.JButton();
         LogoBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,23 +44,23 @@ public class UserTransactionsWindow extends javax.swing.JFrame {
         CollectionCenterPanel.add(Title5);
         Title5.setBounds(180, 30, 150, 31);
 
-        Confirm2Btn1.setBackground(new java.awt.Color(15, 71, 34));
-        Confirm2Btn1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Confirm2Btn1.setForeground(new java.awt.Color(255, 255, 255));
-        Confirm2Btn1.setText("VOLVER");
-        Confirm2Btn1.setBorder(null);
-        Confirm2Btn1.setIconTextGap(0);
-        Confirm2Btn1.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        Confirm2Btn1.setMaximumSize(new java.awt.Dimension(40, 40));
-        Confirm2Btn1.setMinimumSize(new java.awt.Dimension(40, 40));
-        Confirm2Btn1.setPreferredSize(new java.awt.Dimension(40, 40));
-        Confirm2Btn1.addActionListener(new java.awt.event.ActionListener() {
+        LoadBtn.setBackground(new java.awt.Color(15, 71, 34));
+        LoadBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LoadBtn.setForeground(new java.awt.Color(255, 255, 255));
+        LoadBtn.setText("CARGAR TRANSACCIONES");
+        LoadBtn.setBorder(null);
+        LoadBtn.setIconTextGap(0);
+        LoadBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        LoadBtn.setMaximumSize(new java.awt.Dimension(40, 40));
+        LoadBtn.setMinimumSize(new java.awt.Dimension(40, 40));
+        LoadBtn.setPreferredSize(new java.awt.Dimension(40, 40));
+        LoadBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Confirm2Btn1ActionPerformed(evt);
+                LoadBtnActionPerformed(evt);
             }
         });
-        CollectionCenterPanel.add(Confirm2Btn1);
-        Confirm2Btn1.setBounds(160, 330, 190, 30);
+        CollectionCenterPanel.add(LoadBtn);
+        LoadBtn.setBounds(280, 340, 190, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -76,6 +77,24 @@ public class UserTransactionsWindow extends javax.swing.JFrame {
 
         CollectionCenterPanel.add(jScrollPane1);
         jScrollPane1.setBounds(50, 90, 420, 220);
+
+        BackBtn.setBackground(new java.awt.Color(15, 71, 34));
+        BackBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BackBtn.setForeground(new java.awt.Color(255, 255, 255));
+        BackBtn.setText("VOLVER");
+        BackBtn.setBorder(null);
+        BackBtn.setIconTextGap(0);
+        BackBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        BackBtn.setMaximumSize(new java.awt.Dimension(40, 40));
+        BackBtn.setMinimumSize(new java.awt.Dimension(40, 40));
+        BackBtn.setPreferredSize(new java.awt.Dimension(40, 40));
+        BackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackBtnActionPerformed(evt);
+            }
+        });
+        CollectionCenterPanel.add(BackBtn);
+        BackBtn.setBounds(50, 340, 190, 30);
 
         jPanel1.add(CollectionCenterPanel);
         CollectionCenterPanel.setBounds(210, 100, 510, 390);
@@ -108,11 +127,11 @@ public class UserTransactionsWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Confirm2Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Confirm2Btn1ActionPerformed
+    private void LoadBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadBtnActionPerformed
         UserMainWindow mainW = new UserMainWindow();
         mainW.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_Confirm2Btn1ActionPerformed
+    }//GEN-LAST:event_LoadBtnActionPerformed
 
     private void LogoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoBtnActionPerformed
         UserMainWindow mainW = new UserMainWindow();
@@ -120,9 +139,16 @@ public class UserTransactionsWindow extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_LogoBtnActionPerformed
 
+    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
+        UserMainWindow mainW = new UserMainWindow();
+        mainW.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackBtnActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackBtn;
     private javax.swing.JPanel CollectionCenterPanel;
-    private javax.swing.JButton Confirm2Btn1;
+    private javax.swing.JButton LoadBtn;
     private javax.swing.JButton LogoBtn;
     private javax.swing.JLabel Title5;
     private javax.swing.JPanel jPanel1;

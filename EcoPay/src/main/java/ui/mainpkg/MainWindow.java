@@ -60,7 +60,7 @@ public class MainWindow extends javax.swing.JFrame {
         RegisterBtn.setBackground(new java.awt.Color(15, 71, 34));
         RegisterBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         RegisterBtn.setForeground(new java.awt.Color(255, 255, 255));
-        RegisterBtn.setText("REGISTER");
+        RegisterBtn.setText("REGISTRARSE");
         RegisterBtn.setBorder(null);
         RegisterBtn.setIconTextGap(0);
         RegisterBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -73,12 +73,12 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
         jPanel1.add(RegisterBtn);
-        RegisterBtn.setBounds(860, 0, 80, 80);
+        RegisterBtn.setBounds(850, 0, 90, 80);
 
         LoginBtn.setBackground(new java.awt.Color(15, 71, 34));
         LoginBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         LoginBtn.setForeground(new java.awt.Color(255, 255, 255));
-        LoginBtn.setText("LOGIN");
+        LoginBtn.setText("INGRESAR");
         LoginBtn.setBorder(null);
         LoginBtn.setIconTextGap(0);
         LoginBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -96,7 +96,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
         jPanel1.add(LoginBtn);
-        LoginBtn.setBounds(760, 0, 80, 80);
+        LoginBtn.setBounds(750, 0, 90, 80);
 
         jSeparator1.setForeground(new java.awt.Color(77, 175, 124));
         jPanel1.add(jSeparator1);

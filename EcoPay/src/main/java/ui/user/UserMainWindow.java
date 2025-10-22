@@ -7,7 +7,7 @@ public class UserMainWindow extends javax.swing.JFrame {
     public UserMainWindow() {
         initComponents();
         Utils.adjustImageToButton(LogoBtn, "/img/mainlogo.png");
-        Utils.adjustImageToButton(ProfileBtn, "/img/perfil.png");
+        Utils.adjustImageToButton(ProfileBtn, "/img/profile.png");
         PopUpPanel.setVisible(false);
         ProfileBtn.setVisible(true);
     }
@@ -21,7 +21,6 @@ public class UserMainWindow extends javax.swing.JFrame {
         LogoBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         Title2 = new javax.swing.JLabel();
-        Title3 = new javax.swing.JLabel();
         Title6 = new javax.swing.JLabel();
         Title7 = new javax.swing.JLabel();
         Title4 = new javax.swing.JLabel();
@@ -65,13 +64,8 @@ public class UserMainWindow extends javax.swing.JFrame {
 
         Title2.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         Title2.setForeground(new java.awt.Color(255, 255, 255));
-        Title2.setText("NOMBRE USUARIO");
-        jPanel2.add(Title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 170, -1));
-
-        Title3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        Title3.setForeground(new java.awt.Color(255, 255, 255));
-        Title3.setText("NOMBRE USUARIO");
-        jPanel2.add(Title3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 170, -1));
+        Title2.setText("<NOMBRE USUARIO>");
+        jPanel2.add(Title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 200, -1));
 
         Title6.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         Title6.setForeground(new java.awt.Color(255, 255, 255));
@@ -387,7 +381,6 @@ public class UserMainWindow extends javax.swing.JFrame {
     private javax.swing.JButton ProfileChild2Btn;
     private javax.swing.JButton RecicleBtn;
     private javax.swing.JLabel Title2;
-    private javax.swing.JLabel Title3;
     private javax.swing.JLabel Title4;
     private javax.swing.JLabel Title5;
     private javax.swing.JLabel Title6;

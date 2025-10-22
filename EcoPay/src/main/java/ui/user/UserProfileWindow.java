@@ -8,7 +8,7 @@ public class UserProfileWindow extends javax.swing.JFrame {
         initComponents();
         
         Utils.adjustImageToButton(LogoBtn, "/img/mainlogo.png");
-        Utils.adjustImageToButton(ProfileBtn, "/img/perfil.png");
+        Utils.adjustImageToButton(ProfileBtn, "/img/profile.png");
     }
     
     // DO NOT TOUCH
@@ -65,7 +65,7 @@ public class UserProfileWindow extends javax.swing.JFrame {
         RegisterBtn.setBackground(new java.awt.Color(15, 71, 34));
         RegisterBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         RegisterBtn.setForeground(new java.awt.Color(255, 255, 255));
-        RegisterBtn.setText("REGISTRAR");
+        RegisterBtn.setText("REGISTRAR CAMBIOS");
         RegisterBtn.setBorder(null);
         RegisterBtn.setIconTextGap(0);
         RegisterBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -101,7 +101,7 @@ public class UserProfileWindow extends javax.swing.JFrame {
         CancelBtn.setBackground(new java.awt.Color(15, 71, 34));
         CancelBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         CancelBtn.setForeground(new java.awt.Color(255, 255, 255));
-        CancelBtn.setText("CANCELAR");
+        CancelBtn.setText("VOLVER");
         CancelBtn.setBorder(null);
         CancelBtn.setIconTextGap(0);
         CancelBtn.setMargin(new java.awt.Insets(0, 0, 0, 0));
